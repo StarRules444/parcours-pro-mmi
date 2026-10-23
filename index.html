@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mon parcours professionnel MMI</title>
+  <meta name="description" content="Mon parcours professionnel MMI : retour sur mon stage de BUT1 chez Bernard Print et préparation à l'alternance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=League+Spartan:wght@500;600;700&family=Jost:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ET SOMMAIRE ===== -->
+  <header class="topbar">
+    <a class="topbar__nom" href="#accueil">S. Martin <span>· MMI</span></a>
+    <nav class="sommaire" aria-label="Sommaire">
+      <ul>
+        <li><a href="#stage"><b>1.</b> Mon stage</a></li>
+        <li><a href="#missions"><b>2.</b> Missions</a></li>
+        <li><a href="#realisations"><b>3.</b> Réalisations</a></li>
+        <li><a href="#outils"><b>4.</b> Outils</a></li>
+        <li><a href="#bilan"><b>5.</b> Bilan</a></li>
+        <li><a href="#alternance"><b>6.</b> Alternance</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== ACCUEIL ===== -->
+    <section class="hero" id="accueil">
+      <div class="hero__texte">
+        <p class="eyebrow">BUT MMI · Stage de 1re année · <span id="hero-periode"></span></p>
+        <h1>Mon parcours professionnel <em>MMI</em></h1>
+        <p class="hero__intro" id="hero-intro"></p>
+        <ul class="hero__chiffres" id="hero-chiffres"></ul>
+      </div>
+      <figure class="hero__arche">
+        <svg class="toque" viewBox="0 0 64 48" aria-hidden="true">
+          <path d="M32 4 2 17l30 13 30-13L32 4Z"/>
+          <path d="M14 23v11c0 5 8 9 18 9s18-4 18-9V23L32 31 14 23Z"/>
+          <path d="M57 19v15" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="57" cy="37" r="3"/>
+        </svg>
+        <img src="assets/images/atelier-presse.jpg" alt="Sabrina à l'atelier de Bernard Print, devant la presse à chaud">
+        <figcaption>À l'atelier, presse à chaud</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== 1. MON STAGE ===== -->
+    <section class="section" id="stage">
+      <h2 class="titre-section"><span class="num">1.</span> Mon stage de BUT1</h2>
+      <div class="stage">
+        <dl class="fiche" id="fiche-stage"></dl>
+        <div class="stage__texte">
+          <p id="stage-presentation"></p>
+          <h3>Ce que propose l'entreprise</h3>
+          <ul class="liste-puces" id="stage-activites"></ul>
+          <p class="mission-principale"><strong>Ma mission principale :</strong> <span id="stage-mission"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. MES MISSIONS ===== -->
+    <section class="section" id="missions">
+      <h2 class="titre-section"><span class="num">2.</span> Mes missions</h2>
+      <div class="barre-filtres">
+        <p class="compteur" id="compteur-missions" aria-live="polite"></p>
+        <div class="filtres" id="filtres-missions" role="group" aria-label="Filtrer les missions par catégorie"></div>
+      </div>
+      <ol class="missions" id="liste-missions"></ol>
+    </section>
+
+    <!-- ===== 3. MES RÉALISATIONS ===== -->
+    <section class="section" id="realisations">
+      <h2 class="titre-section"><span class="num">3.</span> Mes réalisations</h2>
+      <p class="chapo">Visuels que j'ai créés pendant le stage. Clique sur une image pour l'agrandir.</p>
+      <div class="galerie" id="galerie"></div>
+    </section>
+
+    <!-- ===== 4. MES OUTILS ===== -->
+    <section class="section" id="outils">
+      <h2 class="titre-section"><span class="num">4.</span> Mes outils</h2>
+      <div class="outils" id="liste-outils"></div>
+      <div class="materiel">
+        <h3>Matériel de l'atelier</h3>
+        <ul class="tags" id="liste-materiel"></ul>
+      </div>
+    </section>
+
+    <!-- ===== 5. MON BILAN ===== -->
+    <section class="section" id="bilan">
+      <h2 class="titre-section"><span class="num">5.</span> Mon bilan</h2>
+      <div class="bilan" id="bilan-contenu"></div>
+      <h3 class="sous-titre">Compétences développées</h3>
+      <div class="competences" id="competences"></div>
+    </section>
+
+    <!-- ===== 6. PRÉPARATION À L'ALTERNANCE ===== -->
+    <section class="section" id="alternance">
+      <h2 class="titre-section"><span class="num">6.</span> Ma préparation à l'alternance</h2>
+      <div class="alternance" id="alternance-contenu"></div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <p class="pied__merci">Merci !</p>
+    <p id="pied-texte"></p>
+    <div class="pied__liens">
+      <a class="pied__lien" href="https://www.bernardprint.fr/" target="_blank" rel="noopener">BERNARD PRINT – Site de l'entreprise</a>
+      <a class="pied__lien" href="https://sabrina-martin-butmmi.netlify.app/" target="_blank" rel="noopener">SABRINA MARTIN – Mon Portfolio</a>
+    </div>
+  </footer>
+
+  <!-- Fenêtre d'agrandissement des réalisations -->
+  <dialog class="visionneuse" id="visionneuse" aria-labelledby="visionneuse-titre">
+    <button type="button" class="visionneuse__fermer" id="visionneuse-fermer" aria-label="Fermer">×</button>
+    <img id="visionneuse-image" src="" alt="">
+    <div class="visionneuse__miniatures" id="visionneuse-miniatures"></div>
+    <div class="visionneuse__legende">
+      <p class="pill" id="visionneuse-type"></p>
+      <h3 id="visionneuse-titre"></h3>
+      <p id="visionneuse-description"></p>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">Ce site affiche son contenu grâce à JavaScript : active-le pour voir mon parcours.</p></noscript>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

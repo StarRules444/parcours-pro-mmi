@@ -1,0 +1,5 @@
+Place ici les icônes des logiciels avec ces noms exacts :
+- canva.png
+- photoshop.png
+- navlab.png
+Format carré conseillé (ex. 256 x 256 px).
