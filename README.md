@@ -28,7 +28,7 @@ js/traitements.js     TRAITEMENTS : filtrer, trier, chercher (aucun accès au HT
 js/affichage.js       AFFICHAGE : fonctions qui génèrent le HTML à partir des données
 js/app.js             LANCEMENT : état de la page et gestion des événements
 assets/images/        visuels des projets, photo, motif de fond, icônes des logiciels
-assets/videos/        réel Carré Tropical (MP4 compressé)
+assets/videos/        réel Carré Tropical et clip Petit Sauveteur (MP4 compressés)
 assets/documents/     catalogue Bernard Print (PDF)
 ```
 
@@ -59,15 +59,14 @@ Défis de la séance 1 : la console (F12) affiche chaque mission avec sa catégo
 
 - Les filtres ne sont pas conservés dans l'adresse de la page : un rechargement les réinitialise.
 - Les polices viennent de Google Fonts : sans connexion, des polices de secours s'affichent.
-- La vidéo (environ 5 Mo) peut être lente à charger sur une petite connexion.
-- Le projet Petit Sauveteur n'a pas encore de visuel.
-- Les icônes des logiciels doivent être placées dans `assets/images/icones/` (`canva.png`, `photoshop.png`, `navlab.png`) ; sinon les initiales s'affichent.
+- Les vidéos (environ 5 et 10 Mo) peuvent être lentes à charger sur une petite connexion ; elles ne se chargent qu'à l'ouverture de l'étude de cas.
+- Si une icône de logiciel manque dans `assets/images/icones/`, ses initiales s'affichent à la place.
 - Contenu à mettre à jour quand mon alternance de BUT3 commencera.
 
 ## Crédits et droits
 
 - Textes, visuels et vidéos : Sabrina MARTIN, sauf mention contraire.
-- Visuels Bernard Print et vidéo Carré Tropical publiés avec l'autorisation des entreprises.
+- Visuels Bernard Print, vidéo Carré Tropical et clip Petit Sauveteur (℗ 2026 Émergences Secourisme) publiés avec l'autorisation des structures.
 - Bouj Dous : projet de groupe de SAÉ ; mes camarades sont cités par leur rôle, sans leur nom.
 - Polices Playfair Display, League Spartan et Jost (SIL Open Font License).
 - Développement réalisé avec l'aide d'un assistant IA (Claude, d'Anthropic) ; contenus relus et validés par moi.

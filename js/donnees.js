@@ -30,7 +30,7 @@ const competences = [
     preuves: [
       {
         projet: "petit-sauveteur",
-        texte: "Vidéo pensée pour des enfants : vocabulaire simple, gestes montrés pas à pas, format court."
+        texte: "Clip pensé pour des enfants : images colorées, gestes montrés étape par étape, paroles sous-titrées."
       },
       {
         projet: "catalogue-bernard-print",
@@ -159,24 +159,30 @@ const projets = [
     type: "Vidéo",
     competences: ["comprendre", "exprimer"],
     outils: ["CapCut"],
-    media: null,
-    resume: "Une vidéo pour sensibiliser les enfants aux gestes de premiers secours.",
+    media: {
+      type: "video",
+      src: "assets/videos/petit-sauveteur-clip.mp4",
+      poster: "assets/images/petit-sauveteur-apercu.jpg",
+      alt: "Clip Petit Sauveteur : illustrations d'enfants dans une école antillaise, avant, pendant et après un séisme, avec les paroles sous-titrées"
+    },
+    resume: "Le clip illustré de la chanson « Petit Sauveteur » : les bons réflexes des enfants en cas de séisme.",
     contexte:
-      "Service civique au sein de l'association Émergences Secourisme, qui forme aux premiers secours et intervient auprès des enfants et des adultes.",
+      "Service civique chez Émergences Secourisme, association qui forme aux premiers secours. L'association a produit une chanson pour enfants, « Petit Sauveteur », et voulait l'accompagner d'un clip.",
     objectif:
-      "Apprendre aux enfants les bons réflexes face à un accident, avec une vidéo adaptée à leur âge.",
-    role:
-      "Réalisation de la vidéo dans le cadre de ma mission de community manager (flyers, catalogue de formations, photo et vidéo).",
+      "Apprendre aux enfants les bons réflexes face à un séisme : se protéger sous une table, sortir dans le calme, rejoindre le point de rassemblement, appeler le 112 et aider un camarade blessé.",
+    role: "Réalisation et montage vidéo en binôme, et création des sous-titres.",
     demarche: [
-      "Comprendre le public : attention courte, vocabulaire simple, besoin d'exemples concrets",
-      "Choisir les gestes essentiels à montrer",
-      "Écrire un script court, puis tourner",
-      "Monter avec un rythme rapide et des textes à l'écran"
+      "Comprendre le public : des enfants, une attention courte, le besoin d'images claires",
+      "Découper la chanson en scènes : avant, pendant et après le séisme",
+      "Choisir des illustrations colorées dans un décor antillais : école, cour, palmiers",
+      "Monter les images sur le rythme de la musique",
+      "Sous-titrer les paroles pour que les enfants puissent chanter et retenir les gestes"
     ],
-    resultat: "Une vidéo de sensibilisation utilisée par l'association.",
-    difficultes: "Simplifier les gestes sans les déformer et garder l'attention des enfants jusqu'au bout.",
+    resultat: "Un clip de 2 min 20, produit par Émergences Secourisme en 2026.",
+    difficultes:
+      "Montrer une situation qui fait peur sans effrayer les enfants, et caler chaque image et chaque sous-titre sur la musique.",
     retour:
-      "Partir du public a guidé tous mes choix. La prochaine fois, je testerais une première version auprès de quelques enfants avant le montage final."
+      "Les couleurs vives et les sous-titres rendent le message facile à suivre. La prochaine fois, je montrerais une première version à une classe avant la version finale."
   },
   {
     id: "bouj-dous",
@@ -226,7 +232,7 @@ const projets = [
       type: "video",
       src: "assets/videos/carre-tropical-all-day-in.mp4",
       poster: "assets/images/carre-tropical-poster.jpg",
-      alt: "Réel All Day In : l'équipe Carré Tropical anime le public d'un festival, jeux et danses dans la foule"
+      alt: "Réel All Day In : l'équipe Carré Tropical, en t-shirts « Adi Crew », anime le public du festival sous une pluie de bulles"
     },
     resume: "Des réels qui racontent les événements d'une agence dédiée à la culture créole.",
     contexte:
@@ -596,8 +602,8 @@ const projection = {
     "Canva, Photoshop, Illustrator, CapCut et bases HTML / CSS / JavaScript"
   ],
   ecarts: [
-    "InDesign et la mise en page de documents de plusieurs pages",
-    "La préparation des fichiers pour l'imprimeur (CMJN, fonds perdus, 300 dpi)",
+    "Être plus à l'aise sur Illustrator et Photoshop, pour moins dépendre de Canva",
+    "Plus de projets graphiques pour de vrais clients, au-delà des projets d'école",
     "Un portfolio plus centré sur le graphisme",
     "Une première expérience en agence, avec plusieurs clients en parallèle"
   ],
@@ -605,17 +611,12 @@ const projection = {
     {
       quand: "D'ici décembre 2026",
       action:
-        "Trouver mon alternance de BUT3 : candidatures ciblées vers des agences et services communication de Guadeloupe et de Martinique, en mettant en avant graphisme et réseaux sociaux."
-    },
-    {
-      quand: "Décembre 2026",
-      action:
-        "Refaire le catalogue Bernard Print sur InDesign en exercice personnel : grille, styles, export PDF prêt pour l'impression."
+        "Trouver mon alternance de BUT3 : candidatures ciblées vers des agences et services communication de Guadeloupe, en mettant en avant graphisme et réseaux sociaux."
     },
     {
       quand: "Janvier – février 2027",
       action:
-        "Créer ma check-list d'impression (CMJN, 300 dpi, fonds perdus, polices vectorisées) et la faire relire par l'équipe de Bernard Print."
+        "Créer un visuel par semaine sur Illustrator ou Photoshop (affiche, post, logo) plutôt que sur Canva, et les partager sur mes réseaux."
     },
     {
       quand: "Mars 2027",
@@ -623,7 +624,7 @@ const projection = {
     },
     {
       quand: "Avril – mai 2027",
-      action: "Préparer une certification Adobe Certified Professional (Illustrator ou InDesign)."
+      action: "Préparer une certification Adobe Certified Professional (Illustrator ou Photoshop)."
     },
     {
       quand: "Juin – septembre 2027",
@@ -649,6 +650,7 @@ const transparence = {
     "Textes, visuels et vidéos : Sabrina MARTIN, sauf mention contraire.",
     "Bouj Dous : projet de groupe (SAÉ 4 Créa 1). Mes camarades sont désignés par leur rôle, sans leur nom.",
     "Blason de la Ville de Pointe-à-Pitre : fourni dans le cadre pédagogique de la SAÉ.",
+    "Petit Sauveteur : chanson de Naty May, clip ℗ 2026 Émergences Secourisme, réalisé et monté en binôme ; crédits complets à la fin de la vidéo.",
     "Polices Playfair Display, League Spartan et Jost : Google Fonts, licence SIL Open Font License.",
     "Motif de lignes en fond : créé pour ce site, d'après mon rapport de stage.",
     "Développement réalisé avec l'aide d'un assistant IA (Claude, d'Anthropic) ; contenus relus et validés par moi."
@@ -660,7 +662,7 @@ const transparence = {
     { texte: "Site de Bernard Print", url: "https://www.bernardprint.fr/" }
   ],
   droits: [
-    "Les visuels de Bernard Print et la vidéo de Carré Tropical sont publiés avec l'autorisation des entreprises.",
+    "Les visuels de Bernard Print, la vidéo de Carré Tropical et le clip d'Émergences Secourisme sont publiés avec l'autorisation des structures.",
     "La vidéo All Day In a été tournée lors d'un événement public et déjà diffusée par Carré Tropical sur ses réseaux.",
     "Aucune donnée personnelle de tiers : numéros masqués sur l'invitation, emplacement photo vide sur la maquette de tasse.",
     "Les coordonnées des entreprises ne sont pas reprises ; seul le site public de Bernard Print est lié.",
