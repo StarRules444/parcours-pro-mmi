@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Mon parcours professionnel MMI</title>
-  <meta name="description" content="Mon parcours professionnel MMI : retour sur mon stage de BUT1 chez Bernard Print et préparation à l'alternance.">
+  <meta name="description" content="Portail professionnel de Sabrina MARTIN, étudiante en BUT MMI : compétences, études de cas, parcours, stage de BUT1 et projection professionnelle.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=League+Spartan:wght@500;600;700&family=Jost:ital,wght@0,400;0,500;1,400&display=swap">
@@ -12,46 +12,109 @@
 </head>
 <body>
 
-  <!-- ===== EN-TÊTE ET SOMMAIRE ===== -->
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
   <header class="topbar">
     <a class="topbar__nom" href="#accueil">S. Martin <span>· MMI</span></a>
-    <nav class="sommaire" aria-label="Sommaire">
+    <nav class="sommaire" aria-label="Navigation principale">
       <ul>
-        <li><a href="#stage"><b>1.</b> Mon stage</a></li>
-        <li><a href="#missions"><b>2.</b> Missions</a></li>
-        <li><a href="#realisations"><b>3.</b> Réalisations</a></li>
-        <li><a href="#outils"><b>4.</b> Outils</a></li>
-        <li><a href="#bilan"><b>5.</b> Bilan</a></li>
-        <li><a href="#alternance"><b>6.</b> Alternance</a></li>
+        <li><a href="#competences"><b>1.</b> Compétences</a></li>
+        <li><a href="#projets"><b>2.</b> Projets</a></li>
+        <li><a href="#parcours"><b>3.</b> Parcours</a></li>
+        <li><a href="#stage"><b>4.</b> Stage BUT1</a></li>
+        <li><a href="#projection"><b>5.</b> Projection</a></li>
+        <li><a href="#contact"><b>6.</b> Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="contenu" tabindex="-1">
 
     <!-- ===== ACCUEIL ===== -->
-    <section class="hero" id="accueil">
+    <section class="hero" id="accueil" aria-labelledby="titre-accueil">
       <div class="hero__texte">
-        <p class="eyebrow">BUT MMI · Stage de 1re année · <span id="hero-periode"></span></p>
-        <h1>Mon parcours professionnel <em>MMI</em></h1>
-        <p class="hero__intro" id="hero-intro"></p>
+        <p class="eyebrow">BUT MMI · 3e année · Design graphique</p>
+        <h1 id="titre-accueil">Mon parcours professionnel <em>MMI</em></h1>
+        <p class="hero__intro">Sabrina MARTIN, future graphiste. Mes compétences, mes projets de la première à la troisième année, mon stage chez Bernard Print et la suite que je prépare.</p>
         <ul class="hero__chiffres" id="hero-chiffres"></ul>
       </div>
       <figure class="hero__arche">
-        <svg class="toque" viewBox="0 0 64 48" aria-hidden="true">
+        <svg class="toque" viewBox="0 0 64 48" aria-hidden="true" focusable="false">
           <path d="M32 4 2 17l30 13 30-13L32 4Z"/>
           <path d="M14 23v11c0 5 8 9 18 9s18-4 18-9V23L32 31 14 23Z"/>
-          <path d="M57 19v15" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path class="toque__fil" d="M57 19v15"/>
           <circle cx="57" cy="37" r="3"/>
         </svg>
         <img src="assets/images/atelier-presse.jpg" alt="Sabrina à l'atelier de Bernard Print, devant la presse à chaud">
-        <figcaption>À l'atelier, presse à chaud</figcaption>
+        <figcaption>À l'atelier, stage de BUT1</figcaption>
       </figure>
     </section>
 
-    <!-- ===== 1. MON STAGE ===== -->
-    <section class="section" id="stage">
-      <h2 class="titre-section"><span class="num">1.</span> Mon stage de BUT1</h2>
+    <!-- ===== 1. COMPÉTENCES ===== -->
+    <section class="section" id="competences" aria-labelledby="titre-competences">
+      <h2 class="titre-section" id="titre-competences"><span class="num" aria-hidden="true">1.</span> Mes compétences</h2>
+      <p class="chapo">Les cinq compétences du BUT MMI. Choisis-en une pour voir ma justification et mes preuves (flèches du clavier pour passer de l'une à l'autre).</p>
+      <div class="competences">
+        <div class="onglets" id="onglets-competences" role="tablist" aria-label="Compétences MMI"></div>
+        <div class="panneau" id="panneau-competence" role="tabpanel" tabindex="0"></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. PROJETS ===== -->
+    <section class="section" id="projets" aria-labelledby="titre-projets">
+      <h2 class="titre-section" id="titre-projets"><span class="num" aria-hidden="true">2.</span> Projets et réalisations</h2>
+      <p class="chapo">Cinq études de cas, du BUT1 au BUT3 : contexte, rôle, démarche, résultat et regard critique.</p>
+
+      <form class="filtres-projets" id="filtres-projets" aria-label="Filtrer les projets" onsubmit="return false">
+        <div class="champ">
+          <label for="filtre-annee">Année</label>
+          <select id="filtre-annee"></select>
+        </div>
+        <div class="champ">
+          <label for="filtre-competence">Compétence</label>
+          <select id="filtre-competence"></select>
+        </div>
+        <div class="champ">
+          <label for="filtre-type">Type</label>
+          <select id="filtre-type"></select>
+        </div>
+        <div class="champ">
+          <label for="filtre-outil">Outil</label>
+          <select id="filtre-outil"></select>
+        </div>
+        <button type="button" class="bouton bouton--contour" id="reinitialiser-filtres">Réinitialiser les filtres</button>
+      </form>
+
+      <p class="compteur" id="resultats-projets" role="status" aria-live="polite"></p>
+      <div class="grille-projets" id="grille-projets"></div>
+
+      <div class="vide" id="projets-vide" hidden>
+        <p class="vide__titre">Aucun projet correspondant</p>
+        <p>Aucune étude de cas ne réunit tous ces critères. Essaie d'enlever un filtre.</p>
+        <button type="button" class="bouton" id="reinitialiser-vide">Réinitialiser les filtres</button>
+      </div>
+    </section>
+
+    <!-- ===== 3. PARCOURS ===== -->
+    <section class="section" id="parcours" aria-labelledby="titre-parcours">
+      <h2 class="titre-section" id="titre-parcours"><span class="num" aria-hidden="true">3.</span> Mon parcours</h2>
+      <p class="chapo">Du BUT1 au BUT3. Choisis une étape, ou utilise les flèches du clavier une fois dans la frise.</p>
+      <div class="frise-zone">
+        <ol class="frise" id="frise" aria-label="Étapes de mon parcours"></ol>
+      </div>
+      <div class="frise-detail">
+        <div class="jalon-detail" id="jalon-detail" role="region" aria-live="polite" aria-label="Étape sélectionnée"></div>
+        <div class="frise-nav">
+          <button type="button" class="bouton bouton--contour" id="frise-precedent">← Étape précédente</button>
+          <button type="button" class="bouton bouton--contour" id="frise-suivant">Étape suivante →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. STAGE DE BUT1 ===== -->
+    <section class="section" id="stage" aria-labelledby="titre-stage">
+      <h2 class="titre-section" id="titre-stage"><span class="num" aria-hidden="true">4.</span> Mon stage de BUT1</h2>
       <div class="stage">
         <dl class="fiche" id="fiche-stage"></dl>
         <div class="stage__texte">
@@ -61,47 +124,81 @@
           <p class="mission-principale"><strong>Ma mission principale :</strong> <span id="stage-mission"></span></p>
         </div>
       </div>
-    </section>
 
-    <!-- ===== 2. MES MISSIONS ===== -->
-    <section class="section" id="missions">
-      <h2 class="titre-section"><span class="num">2.</span> Mes missions</h2>
+      <h3 class="sous-titre" id="titre-missions">Mes missions</h3>
       <div class="barre-filtres">
-        <p class="compteur" id="compteur-missions" aria-live="polite"></p>
+        <p class="compteur" id="compteur-missions" role="status" aria-live="polite"></p>
         <div class="filtres" id="filtres-missions" role="group" aria-label="Filtrer les missions par catégorie"></div>
       </div>
-      <ol class="missions" id="liste-missions"></ol>
-    </section>
+      <ul class="missions" id="liste-missions" aria-labelledby="titre-missions"></ul>
 
-    <!-- ===== 3. MES RÉALISATIONS ===== -->
-    <section class="section" id="realisations">
-      <h2 class="titre-section"><span class="num">3.</span> Mes réalisations</h2>
-      <p class="chapo">Visuels que j'ai créés pendant le stage. Clique sur une image pour l'agrandir.</p>
-      <div class="galerie" id="galerie"></div>
-    </section>
-
-    <!-- ===== 4. MES OUTILS ===== -->
-    <section class="section" id="outils">
-      <h2 class="titre-section"><span class="num">4.</span> Mes outils</h2>
+      <h3 class="sous-titre">Mes outils</h3>
       <div class="outils" id="liste-outils"></div>
       <div class="materiel">
-        <h3>Matériel de l'atelier</h3>
+        <h4>Matériel de l'atelier</h4>
         <ul class="tags" id="liste-materiel"></ul>
       </div>
-    </section>
 
-    <!-- ===== 5. MON BILAN ===== -->
-    <section class="section" id="bilan">
-      <h2 class="titre-section"><span class="num">5.</span> Mon bilan</h2>
+      <h3 class="sous-titre">Mon bilan</h3>
       <div class="bilan" id="bilan-contenu"></div>
-      <h3 class="sous-titre">Compétences développées</h3>
-      <div class="competences" id="competences"></div>
+      <h4 class="sous-titre sous-titre--petit">Compétences développées pendant le stage</h4>
+      <div class="competences-stage" id="competences-stage"></div>
     </section>
 
-    <!-- ===== 6. PRÉPARATION À L'ALTERNANCE ===== -->
-    <section class="section" id="alternance">
-      <h2 class="titre-section"><span class="num">6.</span> Ma préparation à l'alternance</h2>
-      <div class="alternance" id="alternance-contenu"></div>
+    <!-- ===== 5. PROJECTION ===== -->
+    <section class="section" id="projection" aria-labelledby="titre-projection">
+      <h2 class="titre-section" id="titre-projection"><span class="num" aria-hidden="true">5.</span> Projection professionnelle</h2>
+      <div class="projection">
+        <div class="projection__cible">
+          <p class="eyebrow">Métier visé</p>
+          <p class="projection__metier" id="projection-metier"></p>
+          <p id="projection-pourquoi"></p>
+          <p class="projection__etape" id="projection-etape"></p>
+        </div>
+        <div class="projection__bilan">
+          <div>
+            <h3>Mes acquis</h3>
+            <ul class="liste-puces liste-puces--ok" id="projection-acquis"></ul>
+          </div>
+          <div>
+            <h3>Mes écarts</h3>
+            <ul class="liste-puces liste-puces--ecart" id="projection-ecarts"></ul>
+          </div>
+        </div>
+      </div>
+      <h3 class="sous-titre">Mes actions sur 6 à 12 mois</h3>
+      <ol class="actions" id="projection-actions"></ol>
+    </section>
+
+    <!-- ===== 6. CONTACT ET TRANSPARENCE ===== -->
+    <section class="section" id="contact" aria-labelledby="titre-contact">
+      <h2 class="titre-section" id="titre-contact"><span class="num" aria-hidden="true">6.</span> Contact et transparence</h2>
+      <div class="contact">
+        <address class="contact__carte">
+          <p class="contact__nom">Sabrina MARTIN</p>
+          <p id="contact-statut"></p>
+          <p class="contact__email"><span id="contact-email"></span></p>
+          <div class="contact__actions">
+            <a class="bouton bouton--petit" id="contact-mailto" href="#">Écrire un e-mail</a>
+            <button type="button" class="bouton bouton--petit bouton--contour-clair" id="copier-email">Copier l'adresse</button>
+          </div>
+          <p class="contact__message" id="copie-message" role="status" aria-live="polite"></p>
+        </address>
+        <div class="transparence">
+          <div>
+            <h3>Crédits</h3>
+            <ul class="liste-puces" id="liste-credits"></ul>
+          </div>
+          <div>
+            <h3>Sources</h3>
+            <ul class="liste-puces" id="liste-sources"></ul>
+          </div>
+          <div>
+            <h3>Droits et confidentialité</h3>
+            <ul class="liste-puces" id="liste-droits"></ul>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -115,20 +212,36 @@
     </div>
   </footer>
 
-  <!-- Fenêtre d'agrandissement des réalisations -->
-  <dialog class="visionneuse" id="visionneuse" aria-labelledby="visionneuse-titre">
-    <button type="button" class="visionneuse__fermer" id="visionneuse-fermer" aria-label="Fermer">×</button>
-    <img id="visionneuse-image" src="" alt="">
+  <!-- Fenêtre : étude de cas d'un projet -->
+  <dialog class="fenetre fenetre--etude" id="etude-de-cas" aria-labelledby="etude-titre">
+    <button type="button" class="fenetre__fermer" data-fermer aria-label="Fermer l'étude de cas">×</button>
+    <p class="etude__meta" id="etude-meta"></p>
+    <h2 class="etude__titre" id="etude-titre"></h2>
+    <div class="etude">
+      <div class="etude__media" id="etude-media"></div>
+      <div class="etude__contenu" id="etude-contenu"></div>
+    </div>
+  </dialog>
+
+  <!-- Fenêtre : agrandissement d'une réalisation du stage -->
+  <dialog class="fenetre visionneuse" id="visionneuse" aria-labelledby="visionneuse-titre">
+    <button type="button" class="fenetre__fermer" data-fermer aria-label="Fermer">×</button>
+    <img id="visionneuse-image" src="assets/images/catalogue-couverture.jpg" alt="">
     <div class="visionneuse__miniatures" id="visionneuse-miniatures"></div>
     <div class="visionneuse__legende">
       <p class="pill" id="visionneuse-type"></p>
-      <h3 id="visionneuse-titre"></h3>
+      <h2 id="visionneuse-titre"></h2>
       <p id="visionneuse-description"></p>
+      <a class="bouton bouton--petit" id="visionneuse-lien" href="#" target="_blank" rel="noopener" hidden>Voir le catalogue (PDF)</a>
     </div>
   </dialog>
 
   <noscript><p class="noscript">Ce site affiche son contenu grâce à JavaScript : active-le pour voir mon parcours.</p></noscript>
 
+  <!-- Données → traitements → affichage → lancement -->
+  <script src="js/donnees.js"></script>
+  <script src="js/traitements.js"></script>
+  <script src="js/affichage.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
