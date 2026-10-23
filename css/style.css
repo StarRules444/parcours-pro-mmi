@@ -242,7 +242,7 @@ main { padding-inline: var(--gouttiere); }
   width: 100%;
   aspect-ratio: 4 / 4.4;
   object-fit: cover;
-  object-position: 60% 30%;
+  object-position: 50% 50%;
   border-radius: 10rem 10rem 0.15rem 0.15rem;
 }
 .hero__arche figcaption {
